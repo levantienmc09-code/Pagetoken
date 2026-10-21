@@ -143,7 +143,7 @@ def extract_tokens_from_input(lines):
     seen = set()
     patterns = [
         r'EAAAAU[a-zA-Z0-9%*_\-]+ZDZD',
-        r'EAAAAY[a-zA-Z0-9%*_\-]+ZDZD',
+        r'EAAAAAY[a-zA-Z0-9%*_\-]+ZDZD',
         r'EAAD[a-zA-Z0-9%*_\-]+ZD(?:ZD)?',
     ]
     for line in lines:
@@ -1023,7 +1023,7 @@ class App(ctk.CTk):
         ctk.CTkLabel(hdr_txt, text="THÊM TOKEN FACEBOOK",
                      font=ctk.CTkFont(size=16, weight="bold"), text_color=COLOR_TEXT, anchor="w").pack(anchor="w")
 
-        subtitle = ("Mỗi dòng 1 token · Hỗ trợ EAAAAU, EAAAAY, EAAD"
+        subtitle = ("Mỗi dòng 1 token · Hỗ trợ EAAAAU, EAAAAAY, EAAD"
                     if self.proxy_mode == "nest"
                     else "Mỗi dòng: token|ip:port:user:pass hoặc token|ip:port")
         ctk.CTkLabel(hdr_txt, text=subtitle,
